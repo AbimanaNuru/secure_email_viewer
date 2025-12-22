@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message EmailMessage {
+  string sender_email_address = 1;
+  string subject = 2;
+  string body = 3;
+  bytes attached_image = 4; // raw image bytes
+  string body_hash = 5; // SHA-256 hash of 'body'
+  string image_hash = 6; // SHA-256 hash of image bytes
+}
