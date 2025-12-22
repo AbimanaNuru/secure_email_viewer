@@ -131,34 +131,6 @@ Run the included Dart script to generate a new `sample_email.pb` file:
 dart run bin/generate_email.dart
 ```
 
-This will:
-- Load the image from `assets/sample_image.png`
-- Create an email with sender, subject, and body
-- Compute SHA-256 hashes for verification
-- Generate `assets/sample_email.pb`
-
-### Using Python Script (Alternative)
-
-Alternatively, use the Python script:
-
-```bash
-python3 generate_sample_email.py
-```
-
-### Manual Hash Computation
-
-The hashes are computed as follows:
-
-```dart
-// Body hash (UTF-8 encoding)
-final bodyBytes = utf8.encode(message.body);
-final bodyHash = sha256.convert(bodyBytes).toString();
-
-// Image hash
-final imageHash = sha256.convert(message.attachedImage).toString();
-```
-
-## Creating Sample Email Files 📝
 
 
 ## Hash Verification Process 🔍
@@ -234,8 +206,6 @@ secure_email_viewer/
 │   └── main_*.dart              # Flavor entry points
 ├── protos/
 │   └── email.proto              # Protocol buffer schema
-├── screenshots/                 # App screenshots
-├── generate_sample_email.py     # Sample data generator
 └── pubspec.yaml
 ```
 
