@@ -31,6 +31,7 @@ class SecureEmail extends ThemeExtension<SecureEmail> {
     required this.bottomNavigationBarItemColor,
     required this.cardShimmerBackgroundColor,
     required this.splashScreenBackgroundColor,
+    required this.appBarColorTitle
   });
 
   final Color appBarColor;
@@ -48,6 +49,7 @@ class SecureEmail extends ThemeExtension<SecureEmail> {
   final Color profileHeaderColor;
   final Color semiPrimary;
   final Color primary;
+  final Color appBarColorTitle;
 
   // New Fields
   final Color cardBackgroundColor;
@@ -86,6 +88,7 @@ class SecureEmail extends ThemeExtension<SecureEmail> {
     Color? bottomNavigationBarItemColor,
     Color? cardShimmerBackgroundColor,
     Color? splashScreenBackgroundColor,
+    Color? appBarColorTitle,
   }) {
     return SecureEmail(
       appBarColor: appBarColor ?? this.appBarColor,
@@ -118,6 +121,7 @@ class SecureEmail extends ThemeExtension<SecureEmail> {
           cardShimmerBackgroundColor ?? this.cardShimmerBackgroundColor,
       splashScreenBackgroundColor:
           splashScreenBackgroundColor ?? this.splashScreenBackgroundColor,
+      appBarColorTitle: appBarColorTitle ?? this.appBarColorTitle,
     );
   }
 
@@ -201,6 +205,11 @@ class SecureEmail extends ThemeExtension<SecureEmail> {
         other.splashScreenBackgroundColor,
         t,
       )!,
+      appBarColorTitle: Color.lerp(
+        appBarColorTitle,
+        other.appBarColorTitle,
+        t,
+      )!,
     );
   }
 }
@@ -243,6 +252,7 @@ class AppTheme {
         cardShimmerBackgroundColor:
             SecureEmailCoreColors.shimmerForegroundColor,
         splashScreenBackgroundColor: SecureEmailCoreColors.black,
+        appBarColorTitle: SecureEmailCoreColors.white,
       ),
     ],
   );
@@ -281,6 +291,7 @@ class AppTheme {
         bottomNavigationBarItemColor: SecureEmailCoreColors.white,
         cardShimmerBackgroundColor: SecureEmailCoreColors.foreground,
         splashScreenBackgroundColor: SecureEmailCoreColors.black,
+        appBarColorTitle: SecureEmailCoreColors.white,
       ),
     ],
   );

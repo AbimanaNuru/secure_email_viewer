@@ -15,6 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class EmailMessage extends $pb.GeneratedMessage {
   factory EmailMessage({
+    $core.String? senderName,
     $core.String? senderEmailAddress,
     $core.String? subject,
     $core.String? body,
@@ -23,6 +24,9 @@ class EmailMessage extends $pb.GeneratedMessage {
     $core.String? imageHash,
   }) {
     final $result = create();
+    if (senderName != null) {
+      $result.senderName = senderName;
+    }
     if (senderEmailAddress != null) {
       $result.senderEmailAddress = senderEmailAddress;
     }
@@ -48,12 +52,13 @@ class EmailMessage extends $pb.GeneratedMessage {
   factory EmailMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EmailMessage', createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'senderEmailAddress')
-    ..aOS(2, _omitFieldNames ? '' : 'subject')
-    ..aOS(3, _omitFieldNames ? '' : 'body')
-    ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'attachedImage', $pb.PbFieldType.OY)
-    ..aOS(5, _omitFieldNames ? '' : 'bodyHash')
-    ..aOS(6, _omitFieldNames ? '' : 'imageHash')
+    ..aOS(1, _omitFieldNames ? '' : 'senderName')
+    ..aOS(2, _omitFieldNames ? '' : 'senderEmailAddress')
+    ..aOS(3, _omitFieldNames ? '' : 'subject')
+    ..aOS(4, _omitFieldNames ? '' : 'body')
+    ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'attachedImage', $pb.PbFieldType.OY)
+    ..aOS(6, _omitFieldNames ? '' : 'bodyHash')
+    ..aOS(7, _omitFieldNames ? '' : 'imageHash')
     ..hasRequiredFields = false
   ;
 
@@ -79,58 +84,67 @@ class EmailMessage extends $pb.GeneratedMessage {
   static EmailMessage? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get senderEmailAddress => $_getSZ(0);
+  $core.String get senderName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set senderEmailAddress($core.String v) { $_setString(0, v); }
+  set senderName($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasSenderEmailAddress() => $_has(0);
+  $core.bool hasSenderName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSenderEmailAddress() => clearField(1);
+  void clearSenderName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get subject => $_getSZ(1);
+  $core.String get senderEmailAddress => $_getSZ(1);
   @$pb.TagNumber(2)
-  set subject($core.String v) { $_setString(1, v); }
+  set senderEmailAddress($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasSubject() => $_has(1);
+  $core.bool hasSenderEmailAddress() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSubject() => clearField(2);
+  void clearSenderEmailAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get body => $_getSZ(2);
+  $core.String get subject => $_getSZ(2);
   @$pb.TagNumber(3)
-  set body($core.String v) { $_setString(2, v); }
+  set subject($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasBody() => $_has(2);
+  $core.bool hasSubject() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBody() => clearField(3);
+  void clearSubject() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$core.int> get attachedImage => $_getN(3);
+  $core.String get body => $_getSZ(3);
   @$pb.TagNumber(4)
-  set attachedImage($core.List<$core.int> v) { $_setBytes(3, v); }
+  set body($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasAttachedImage() => $_has(3);
+  $core.bool hasBody() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAttachedImage() => clearField(4);
+  void clearBody() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get bodyHash => $_getSZ(4);
+  $core.List<$core.int> get attachedImage => $_getN(4);
   @$pb.TagNumber(5)
-  set bodyHash($core.String v) { $_setString(4, v); }
+  set attachedImage($core.List<$core.int> v) { $_setBytes(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasBodyHash() => $_has(4);
+  $core.bool hasAttachedImage() => $_has(4);
   @$pb.TagNumber(5)
-  void clearBodyHash() => clearField(5);
+  void clearAttachedImage() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get imageHash => $_getSZ(5);
+  $core.String get bodyHash => $_getSZ(5);
   @$pb.TagNumber(6)
-  set imageHash($core.String v) { $_setString(5, v); }
+  set bodyHash($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasImageHash() => $_has(5);
+  $core.bool hasBodyHash() => $_has(5);
   @$pb.TagNumber(6)
-  void clearImageHash() => clearField(6);
+  void clearBodyHash() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get imageHash => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set imageHash($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasImageHash() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearImageHash() => clearField(7);
 }
 
 

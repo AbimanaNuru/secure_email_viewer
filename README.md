@@ -121,18 +121,29 @@ protoc --dart_out=lib/app/Data\ Layer/Models protos/email.proto
 dart pub global activate protoc_plugin 21.1.2
 ```
 
-## Creating Sample Email Files 📝
+## Generating Sample Email Files 📧
 
-Use the included Python script to generate sample email protobuf files:
+### Using Dart Script (Recommended)
+
+Run the included Dart script to generate a new `sample_email.pb` file:
+
+```bash
+dart run bin/generate_email.dart
+```
+
+This will:
+- Load the image from `assets/sample_image.png`
+- Create an email with sender, subject, and body
+- Compute SHA-256 hashes for verification
+- Generate `assets/sample_email.pb`
+
+### Using Python Script (Alternative)
+
+Alternatively, use the Python script:
 
 ```bash
 python3 generate_sample_email.py
 ```
-
-This creates:
-- `assets/sample_email.pb` - Binary protobuf file with email data
-- Computes SHA-256 hashes for body and image
-- Embeds the image from `assets/sample_image.png`
 
 ### Manual Hash Computation
 
@@ -146,6 +157,9 @@ final bodyHash = sha256.convert(bodyBytes).toString();
 // Image hash
 final imageHash = sha256.convert(message.attachedImage).toString();
 ```
+
+## Creating Sample Email Files 📝
+
 
 ## Hash Verification Process 🔍
 

@@ -53,3 +53,11 @@ flutter:
   assets:
     - .env
     - assets/
+
+# Splash screen configuration
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/splash_logo.png
+  android: true
+  ios: true
+  web: false

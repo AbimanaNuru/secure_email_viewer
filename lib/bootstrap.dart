@@ -29,5 +29,8 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
 
   // Add cross-flavor configuration here
 
+  // Keep splash screen visible for 5 seconds
+  await Future.delayed(const Duration(seconds: 2));
+
   runApp(await builder());
 }
