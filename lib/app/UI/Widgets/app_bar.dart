@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secure_email_viewer/app/Business%20Logic/Theme/ThemeComponent.dart';
 import 'package:secure_email_viewer/app/Business%20Logic/Theme/theme_cubit.dart';
+import 'package:secure_email_viewer/app/UI/Utils/Constants/Constants.dart';
 
 /// Builds a reusable app bar for the Secure Email Viewer app.
 ///
@@ -39,8 +40,8 @@ AppBar buildAppBar({
               : Icons.dark_mode,
         ),
         tooltip: theme.brightness == Brightness.dark
-            ? 'Light Mode'
-            : 'Dark Mode',
+            ? AppTexts.lightMode
+            : AppTexts.darkMode,
         onPressed: () {
           context.read<ThemeCubit>().toggleTheme();
         },

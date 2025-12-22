@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secure_email_viewer/app/Business%20Logic/EmailViewer/email_viewer_bloc.dart';
 import 'package:secure_email_viewer/app/Business%20Logic/Theme/ThemeComponent.dart';
 import 'package:secure_email_viewer/app/Data%20Layer/Repositories/email_repository.dart';
+import 'package:secure_email_viewer/app/UI/Utils/Constants/AppTexts.dart';
 import 'package:secure_email_viewer/app/UI/Widgets/app_bar.dart';
 import 'package:secure_email_viewer/app/UI/Widgets/email_attachment_card.dart';
 import 'package:secure_email_viewer/app/UI/Widgets/email_body_card.dart';
@@ -41,7 +42,7 @@ class EmailView extends StatelessWidget {
 
       appBar: buildAppBar(
         context: context,
-        title: 'Secure Email Viewer',
+        title: AppTexts.appTitle,
       ),
       body: BlocBuilder<EmailViewerBloc, EmailViewerState>(
         builder: (context, state) {
@@ -90,20 +91,20 @@ class EmailView extends StatelessWidget {
             children: [
               // Email headers
               EmailHeaderWidget(
-                label: 'Sender name:',
+                label: AppTexts.senderName,
                 value: msg.senderName,
                 icon: Icons.person,
               ),
               const SizedBox(height: 12),
               EmailHeaderWidget(
-                label: 'Sender email:',
+                label: AppTexts.senderEmail,
                 value: msg.senderEmailAddress,
                 icon: Icons.email_outlined,
               ),
 
               const SizedBox(height: 12),
               EmailHeaderWidget(
-                label: 'Subject:',
+                label: AppTexts.subject,
                 value: msg.subject,
                 icon: Icons.subject,
               ),

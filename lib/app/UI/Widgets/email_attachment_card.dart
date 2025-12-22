@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:secure_email_viewer/app/Business%20Logic/Theme/ThemeComponent.dart';
+import 'package:secure_email_viewer/app/UI/Utils/Constants/Constants.dart';
 import 'package:secure_email_viewer/app/UI/Widgets/verification_badge_widget.dart';
 
 /// Card widget for displaying email image attachments with verification.
@@ -47,7 +48,7 @@ class EmailAttachmentCard extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'Attachment',
+                    AppTexts.attachment,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
@@ -71,14 +72,14 @@ class EmailAttachmentCard extends StatelessWidget {
                         errorBuilder: (_, __, ___) => _buildPlaceholder(
                           theme,
                           Icons.broken_image,
-                          'Failed to load image',
+                          AppTexts.failedToLoadImage,
                         ),
                       ),
                     )
                   : _buildPlaceholder(
                       theme,
                       Icons.image_not_supported,
-                      'No image attached',
+                      AppTexts.noImageAttached,
                     ),
             ),
           ],

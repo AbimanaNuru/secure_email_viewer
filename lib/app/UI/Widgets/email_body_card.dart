@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:secure_email_viewer/app/Business%20Logic/Theme/ThemeComponent.dart';
+import 'package:secure_email_viewer/app/UI/Utils/Constants/Constants.dart';
 import 'package:secure_email_viewer/app/UI/Widgets/verification_badge_widget.dart';
 
 /// Card widget for displaying email body with verification status.
@@ -43,7 +44,7 @@ class EmailBodyCard extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  'Message Body',
+                  AppTexts.messageBody,
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 14,

@@ -1,31 +1,30 @@
-part of Constants;
+class AppTexts {
+  // App Title
+  static const String appTitle = 'Secure Email Viewer';
 
-class CountryAppText {
-  // Screen Titles
-  static const String countries = 'Countries';
-  static const String favorites = 'Favorites';
-  static const String home = 'Home';
+  // Email Viewer Headers
+  static const String senderName = 'Sender name:';
+  static const String senderEmail = 'Sender email:';
+  static const String subject = 'Subject:';
 
-  // Search
-  static const String searchHint = 'Search for a country';
+  // Section Headers
+  static const String messageBody = 'Message Body';
+  static const String attachment = 'Attachment';
 
-  // Empty States
-  static const String noCountriesFound = 'No countries found.';
-  static const String noFavorites = 'No favorites yet';
-  static const String noFavoritesDescription =
-      'Start adding countries to your favorites!';
+  // Verification Status
+  static const String verified = 'Verified Integrity';
+  static const String verificationFailed = 'Verification Failed';
 
-  // Error Messages
-  static const String errorLoadingCountries = 'Failed to load countries';
-  static const String errorLoadingDetails = 'Failed to load country details';
+  // Attachment States
+  static const String failedToLoadImage = 'Failed to load image';
+  static const String noImageAttached = 'No image attached';
+
+  // Error States
+  static const String errorLoadingEmail = 'Error Loading Email';
   static const String retry = 'Retry';
 
-  // Details
-  static const String keyStatistics = 'Key Statistics';
-  static const String timezone = 'Timezone';
-  static const String area = 'Area';
-  static const String population = 'Population';
-  static const String region = 'Region';
-  static const String subRegion = 'Sub Region';
-  static const String capital = 'Capital';
+  // Theme / Tooltips
+  static const String lightMode = 'Light Mode';
+  static const String darkMode = 'Dark Mode';
+  static const String toggleTheme = 'Toggle theme';
 }

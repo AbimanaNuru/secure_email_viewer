@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:secure_email_viewer/app/Business%20Logic/Theme/ThemeComponent.dart';
+import 'package:secure_email_viewer/app/UI/Utils/Constants/Constants.dart';
 
 /// Widget for displaying error states with retry functionality.
 class ErrorStateWidget extends StatelessWidget {
@@ -56,7 +57,7 @@ class ErrorStateWidget extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: onRetry,
                 icon: const Icon(Icons.refresh),
-                label: const Text('Retry'),
+                label: const Text(AppTexts.retry),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 24,

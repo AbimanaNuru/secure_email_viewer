@@ -6,7 +6,8 @@
 
 A Flutter application that loads and displays locally stored email messages in Protocol Buffer format with cryptographic integrity verification using SHA-256 hashing.
 
-![App Screenshot](screenshots/app_screenshot.png)
+![App Demo Video - Secure Email Viewer]
+https://github.com/AbimanaNuru/secure_email_viewer/issues/6
 
 ## Features ✨
 

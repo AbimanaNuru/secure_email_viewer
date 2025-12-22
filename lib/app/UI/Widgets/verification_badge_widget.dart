@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secure_email_viewer/app/UI/Utils/Constants/Constants.dart';
 
 /// Displays a verification badge for cryptographically verified content.
 class VerificationBadgeWidget extends StatelessWidget {
@@ -14,7 +15,7 @@ class VerificationBadgeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Tooltip(
-      message: isVerified ? 'Verified Integrity' : 'Verification Failed',
+      message: isVerified ? AppTexts.verified : AppTexts.verificationFailed,
       child: Container(
         padding: const EdgeInsets.all(4),
         decoration: BoxDecoration(

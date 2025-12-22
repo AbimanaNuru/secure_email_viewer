@@ -1,4 +1,4 @@
-part of Constants;
+import 'package:flutter/material.dart';
 
 class SecureEmailCoreColors {
   // Primary & Secondary Colors
