@@ -85,7 +85,7 @@ class EmailView extends StatelessWidget {
         key: const ValueKey('Content'),
         physics: const BouncingScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

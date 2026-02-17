@@ -30,10 +30,10 @@ class EmailRepository {
 }
 
 class ValidationResult {
-  final bool isBodyValid;
-  final bool isImageValid;
 
   ValidationResult({required this.isBodyValid, required this.isImageValid});
+  final bool isBodyValid;
+  final bool isImageValid;
 
   bool get isValid => isBodyValid && isImageValid;
 }

@@ -241,6 +241,8 @@ If you see `$_clearField` method errors:
    ```bash
    protoc --dart_out=lib/app/Data\ Layer/Models protos/email.proto
    ```
+3. Use this way also to generate a sample db
+  dart run bin/generate_email.dart
 
 ### Hash Verification Fails
 

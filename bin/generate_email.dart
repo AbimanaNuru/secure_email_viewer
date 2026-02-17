@@ -24,10 +24,10 @@ Future<void> main() async {
   print('✅ Loaded image: ${imageBytes.length} bytes');
 
   // Email content
-  final senderName = 'Nuru Abimana';
-  final senderEmail = 'nuruabimana@gmail.com';
-  final subject = 'Secure Message';
-  final body = 'Implementation of secure email viewer';
+  const senderName = 'Nuru Halifa huhuhuhuhh';
+  const senderEmail = 'nuruabimana@gmail.com';
+  const subject = 'Secure Message';
+  const body = 'Implementation of secure email viewer';
 
   // Compute hashes using UTF-8 encoding for body
   final bodyHash = sha256Hash(utf8.encode(body));
@@ -51,7 +51,7 @@ Future<void> main() async {
   await outputFile.writeAsBytes(email.writeToBuffer());
 
   print('\n🎉 Success! Generated: ${outputFile.path}');
-  print('   File size: ${(await outputFile.length())} bytes');
+  print('   File size: ${await outputFile.length()} bytes');
   print('\n📧 Email Details:');
   print('   From: $senderEmail');
   print('   Subject: $subject');

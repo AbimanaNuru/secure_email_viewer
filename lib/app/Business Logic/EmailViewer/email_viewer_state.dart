@@ -13,18 +13,18 @@ class EmailInitial extends EmailViewerState {}
 class EmailLoading extends EmailViewerState {}
 
 class EmailLoaded extends EmailViewerState {
-  final EmailMessage message;
-  final ValidationResult validationResult;
 
   const EmailLoaded(this.message, this.validationResult);
+  final EmailMessage message;
+  final ValidationResult validationResult;
 
   @override
   List<Object> get props => [message, validationResult];
 }
 
 class EmailError extends EmailViewerState {
-  final String message;
   const EmailError(this.message);
+  final String message;
   @override
   List<Object> get props => [message];
 }

@@ -7,8 +7,8 @@ abstract class EmailViewerEvent extends Equatable {
 }
 
 class LoadEmailEvent extends EmailViewerEvent {
-  final String path;
   const LoadEmailEvent(this.path);
+  final String path;
   @override
   List<Object> get props => [path];
 }

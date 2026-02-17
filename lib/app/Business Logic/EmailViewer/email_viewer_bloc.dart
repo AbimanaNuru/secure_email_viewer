@@ -7,11 +7,11 @@ export 'email_viewer_event.dart';
 export 'email_viewer_state.dart';
 
 class EmailViewerBloc extends Bloc<EmailViewerEvent, EmailViewerState> {
-  final EmailRepository repository;
 
   EmailViewerBloc({required this.repository}) : super(EmailInitial()) {
     on<LoadEmailEvent>(_onLoadEmail);
   }
+  final EmailRepository repository;
 
   Future<void> _onLoadEmail(
     LoadEmailEvent event,
@@ -23,7 +23,7 @@ class EmailViewerBloc extends Bloc<EmailViewerEvent, EmailViewerState> {
       final validation = repository.verifyEmail(message);
       emit(EmailLoaded(message, validation));
     } catch (e) {
-      emit(EmailError("Failed to load email: $e"));
+      emit(EmailError('Failed to load email: $e'));
     }
   }
 }
